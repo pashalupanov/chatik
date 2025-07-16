@@ -1,3 +1,4 @@
+import os
 import asyncio
 import datetime
 from aiogram import Bot, Dispatcher, types
@@ -6,9 +7,9 @@ from telethon import TelegramClient
 from telethon.tl.functions.messages import GetHistoryRequest
 
 # --- Конфиги ---
-API_ID = 20470383
-API_HASH = 'a45b98cc45358f9e5aa6c2d5961aeb76'
-BOT_TOKEN = '7581716321:AAFbnq_-B-WpfoJxL4SLqlws-LBXLETfF7E'
+API_ID = int(os.getenv('API_ID'))
+API_HASH = os.getenv('API_HASH')
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 CHANNELS = [
     't.me/Selectel',
     't.me/vk_cloud_news',
